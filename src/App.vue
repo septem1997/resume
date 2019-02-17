@@ -90,7 +90,10 @@
         .pcPanel
             margin-top 48px
 
+
     @media screen and (min-width: 769px)
+        .content
+            overflow auto
         .pcPanel
             margin-top 0
 
@@ -135,6 +138,7 @@
         .pcPanel
             display flex
             flex 1
+            height 100%
 
             .verticalMenu
                 width 240px

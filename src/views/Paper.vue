@@ -128,7 +128,6 @@
         .container
             flex-direction column
             width 100%
-            height 100%
         .right
             width 100%
         .left
@@ -149,7 +148,6 @@
     .workTitle
         display flex
         justify-content space-between
-
     .workContent
         margin-top 5px
         font-size 14px
