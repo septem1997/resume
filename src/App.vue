@@ -57,7 +57,7 @@
                     {
                         name: '个人简介',
                         icon: 'user',
-                        index: '/?p=0'
+                        index: '/'
                     }, {
                         name: '工作经历',
                         icon: 'briefcase',
