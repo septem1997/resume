@@ -11,9 +11,10 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.15",
     "@fortawesome/free-solid-svg-icons": "^5.7.2",
     "@fortawesome/vue-fontawesome": "^0.1.5",
-    "vue": "^2.5.22",
+    "cos-js-sdk-v5": "^0.5.8",
     "element-ui": "^2.5.4",
     "vant": "^1.6.2",
+    "vue": "^2.5.22",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

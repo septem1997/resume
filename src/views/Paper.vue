@@ -49,19 +49,19 @@
                 <strong>主要业绩： </strong>1. 重写ajax请求方法，以非侵入式方式为接口调用添加了拦截器和loading动画，有效提高数据接口开发效率。
                 <br>2. 完善流水单据的打印，利用Promise特性解决了打印顺序不同步的问题，封装打印公共方法，极大降低了同类需求开发成本。
                 <br>3. 改进前端框架，独立编写了国际化多语言模块，使得公司产品可面向海外用户。
-                <br>4. 搭建了webSocket通讯模块，分离数据报表统计导出等耗时操作，提高服务器稳定性和运行性能。
+                <br>4. 搭建了webSocket通讯模块，分离了数据报表导出等耗时操作，提高服务器稳定性和运行性能。
             </div>
 
             <div class="projectName">小笋科技(深圳)有限公司</div>
             <div class="workTitle"><div>Java后端/Web前端</div><div class="workTime">2017-07~2018-06</div></div>
             <div class="workContent">
                 <strong>工作内容： </strong>1. 共享单车业务，负责后台管理系统及微信公众号的开发。
-                <br>2. 类美团点评app，项目技术负责人，负责整个项目的研发，涉及到后端管理系统、微信公众号、小程序、微信支付、即时聊天、线上
+                <br>2. 类美团点评app，项目技术负责人，负责整个项目的研发，涉及到后端管理系统、微信公众号、小程序、微信支付、即时聊天、线上商城等内容。
             </div>
             <div class="workContent">
-                <strong>主要业绩： </strong>1. 为产品开发了即时聊天系统(web端和小程序端)，可发送图片、语音和位置，使得商家和用户不依赖微信直接在应用内沟通。
-                <br>2. 基于POI和JAVA反射技术实现了excel表格导出自动化工具，市场部人员无需了解sql知识即可根据自己需求导出表格数据，极大减少繁杂多样的sql查询需求工作。
-                <br>3. 利用反射和注解实现了前端增删改查html代码自动生成，减少此类重复繁琐的开发工作，让团队更专注于其他特殊需求。
+                <strong>主要业绩： </strong>1. 为产品开发了即时聊天系统(web端和小程序端)，仿微信界面，可发送图片、语音和位置，具有聊天记录本地缓存和线上同步等功能。
+                <br>2. 利用反射和注解实现了前端增删改查html代码自动生成，减少此类重复繁琐的开发工作，让团队更专注于其他特殊需求。
+                <br>3. 基于POI和JAVA反射技术实现了excel表格导出自动化工具，市场部人员无需了解sql知识即可根据自己需求导出表格数据，极大减少繁杂多样的sql查询需求工作。
             </div>
         </div>
     </div>
@@ -76,6 +76,7 @@
                     'CSS',
                     'JavaScript',
                     'Vue',
+                    'LayUI',
                     'jQuery',
                     'Webpack',
                     'Stylus',
@@ -111,9 +112,6 @@
                         val: '750627595@qq.com',
                         icon: 'envelope'
                     },{
-                        val:'coding.net/u/lambda1997',
-                        icon:'code'
-                    },{
                         val:'github.com/septem1997',
                         icon:'code'
                     }
@@ -124,7 +122,6 @@
 </script>
 
 <style scoped lang="stylus">
-
     @media only screen and (max-width: 768px)
         .container
             flex-direction column
@@ -146,6 +143,8 @@
             border-radius: 4px
         .left
             width 240px
+            padding 6px
+            box-sizing border-box
     .workTitle
         display flex
         justify-content space-between
@@ -212,11 +211,15 @@
 
 
     .personInfo
-        margin-left: 28px
+        margin-left: 22px
         font-size: 15px
 
 
-    .personInfo .row
-        margin-top: 10px
+    .personInfo
+        .row
+            margin-top: 10px
+            svg
+                width 20px
+                text-align center
 
 </style>
