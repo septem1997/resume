@@ -87,6 +87,7 @@
                     'Mybatis',
                     'Hibernate',
                     'MySql',
+                    'Redis',
                     'C#',
                     'UWP',
                     'Git',
