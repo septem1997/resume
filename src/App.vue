@@ -83,6 +83,12 @@
 
 
 <style lang="stylus">
+
+    @media print
+        .mobilePanel
+            display none
+        .verticalMenu
+            display none
     @media only screen and (max-width: 768px)
         .verticalMenu
             display none

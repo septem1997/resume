@@ -1,5 +1,22 @@
 <template>
     <div class="container" >
+        <div class="qrCode">
+            <img src="../assets/qrCode.png">
+            <div>扫码查看线上简历</div>
+        </div>
+        <div class="notPrint">
+            <div class="floatBtns ">
+                <div class="downloadBtn floatButton" @click="downloadResume">
+                    <font-awesome-icon  icon="download"/>
+                    <div class="text">下载简历</div>
+                </div>
+                <div class="printBtn floatButton" @click="printResume">
+                    <font-awesome-icon  icon="print"/>
+                    <div class="text">打印简历</div>
+                </div>
+            </div>
+        </div>
+
         <div class="left">
             <div class="avatar">
                 <img  src="../assets/head.jpg">
@@ -69,6 +86,14 @@
 <script>
     export default {
         components: {},
+        methods:{
+            downloadResume(){
+              window.open('http://pn5jqyvqw.bkt.clouddn.com/%E9%99%88%E6%A0%A1%E5%9F%B9-%E7%AE%80%E5%8E%86.pdf')
+            },
+            printResume() {
+                window.print()
+            }
+        },
         data() {
             return {
                 skills: [
@@ -121,7 +146,25 @@
     }
 </script>
 
-<style scoped lang="stylus">
+<style lang="stylus" scoped>
+    @media print
+        .container
+            flex-direction row
+            width: 21cm
+            height: 297mm
+            margin: 0
+            box-shadow: none
+            overflow: hidden
+            border-radius: 0
+            .qrCode
+                display block
+            .notPrint
+                display none
+        .left
+            width 240px
+            padding 6px
+            box-sizing border-box
+
     @media only screen and (max-width: 768px)
         .container
             flex-direction column
@@ -130,21 +173,75 @@
             width 100%
         .left
             width 100%
+        .notPrint
+            display none
     @media screen and (min-width: 769px)
         .container
             flex-direction row
             width: 21cm
             height: 297mm
             margin: 10px auto
-            -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12)
             box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12)
             overflow: hidden
-            -webkit-border-radius: 4px
             border-radius: 4px
         .left
             width 240px
             padding 6px
             box-sizing border-box
+
+    .floatBtns
+        position fixed
+        display flex
+        flex-direction column
+        bottom 48px
+        right 48px
+        color white
+        width 120px
+        text-align center
+        align-items center
+
+        .printBtn
+            background-color #FF4081
+        .downloadBtn
+            background-color #7C4DFF
+        .floatButton
+            cursor pointer
+            margin-top 16px
+            transition: all 300ms
+            width 64px
+            height @width
+            border-radius @width
+            box-shadow: 0 4px 4px 0 rgba(0,0,0,0.14), 0 5px 7px -2px rgba(0,0,0,0.2), 0 4px 5px 0 rgba(0,0,0,0.12)
+            .text
+                font-size 18px
+                display none
+                margin-top 18px
+                white-space nowrap
+            svg
+                font-size 32px
+                margin-top 16px
+        .floatButton:hover
+            width 120px
+            opacity .8
+            .text
+                display block
+            svg
+                display none
+
+
+    .qrCode
+        position absolute
+        text-align center
+        color white
+        display none
+        width 200px
+        z-index 999
+        bottom 20px
+        left 20px
+        img
+            margin 0 auto
+            width 100%
+            height auto
     .workTitle
         display flex
         justify-content space-between
