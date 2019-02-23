@@ -1,7 +1,7 @@
 <template>
     <div id="app">
-
-        <div class="mobilePanel">
+        <router-view></router-view>
+        <!--<div class="mobilePanel">
             <div class="header">
                 <font-awesome-icon class="menuIcon" icon="bars" @click="show=true"/>
                 <div class="title">{{menuList.find((item)=>active===item.index).name}}</div>
@@ -32,14 +32,11 @@
                 </el-menu-item>
             </el-menu>
         </popup>
-
+-->
     </div>
 </template>
 
 <script>
-    import {Popup} from 'vant'
-
-
     export default {
         name: 'app',
         computed:{
@@ -48,34 +45,10 @@
             }
         },
         components: {
-            Popup
         },
         data: () => {
             return {
                 show: false,
-                menuList: [
-                    {
-                        name: '个人简介',
-                        icon: 'user',
-                        index: '/'
-                    }, {
-                        name: '工作经历',
-                        icon: 'briefcase',
-                        index: '/?p=1'
-                    }, {
-                        name: '个人项目',
-                        icon: 'project-diagram',
-                        index: '/?p=2'
-                    }, {
-                        name: '个人技能',
-                        icon: 'book',
-                        index: '/?p=3'
-                    }, {
-                        name: '纸质版简历',
-                        icon: 'file-alt',
-                        index: '/paper'
-                    }
-                ]
             }
         }
     }
@@ -84,7 +57,7 @@
 
 <style lang="stylus">
 
-    @media print
+    /*@media print
         .mobilePanel
             display none
         .verticalMenu
@@ -104,12 +77,13 @@
             margin-top 0
 
         .mobilePanel
-            display none
+            display none*/
 
-    .pop
+
+    /*.pop
         width 240px
         height 100%
-        background-color white
+        background-color white*/
     #app
         -webkit-font-smoothing: antialiased
         -moz-osx-font-smoothing: grayscale
@@ -120,7 +94,7 @@
         left 0
         font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
 
-        .elMenuIcon
+        /*.elMenuIcon
             width 24px
             text-align center
         .menuIcon
@@ -147,7 +121,7 @@
             height 100%
 
             .verticalMenu
-                width 240px
+                width 240px*/
 
 
 </style>
