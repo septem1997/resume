@@ -2,7 +2,7 @@
     <div class="root">
         <h1>个人项目</h1>
         <div class="carousel">
-            <el-carousel  trigger="click" :autoplay="false" height="360px">
+            <el-carousel arrow="always" trigger="click" :autoplay="false" height="360px">
                 <el-carousel-item class="item" v-for="(item,index) in projects" :key="index">
                     <a :href="item.url" target="_blank" class="projectTitle">{{ item.title }}</a>
                     <div class="content">{{item.content}}</div>
