@@ -1,5 +1,5 @@
 <template>
-    <div class="root">a</div>
+    <div class="root">建设中</div>
 </template>
 
 <script>
@@ -8,6 +8,8 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="stylus">
+    .root
+        background-color #0097A7
 
 </style>

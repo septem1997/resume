@@ -16,6 +16,8 @@
                 </div>
             </div>
         </div>
+        <div class="backBtn" @click="$router.replace('/')" :style="'transform: translateY('+position+'px)'"><font-awesome-icon icon="home"/></div>
+
 
         <div class="left">
             <div class="avatar">
@@ -94,8 +96,30 @@
                 window.print()
             }
         },
+        mounted(){
+            let that = this
+            document.body.onmousewheel = function(event) {
+                let e = event || window.event;
+                if (e.wheelDelta) {
+                    if (e.wheelDelta > 0) {
+                        that.position = 0
+                    }
+                    if (e.wheelDelta < 0) {
+                        that.position = -60
+                    }
+                } else if (e.detail) {
+                    if (e.detail > 0) {
+                        that.position = 0
+                    }
+                    if (e.detail < 0) {
+                        that.position = -60
+                    }
+                }
+            };
+        },
         data() {
             return {
+                position:0,
                 skills: [
                     'HTML',
                     'CSS',
@@ -160,6 +184,8 @@
                 display block
             .notPrint
                 display none
+            .backBtn
+                display none
         .left
             width 240px
             padding 6px
@@ -189,6 +215,22 @@
             padding 6px
             box-sizing border-box
 
+    .backBtn
+        position fixed
+        transition: transform 300ms
+        top 5px
+        left @top
+        width 36px
+        height @width
+        background-color #7C4DFF
+        opacity 0.5
+        cursor pointer
+        display flex
+        align-items center
+        justify-content center
+        border-radius 50%
+        svg
+            color white
     .floatBtns
         position fixed
         display flex
