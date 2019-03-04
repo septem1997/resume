@@ -56,7 +56,13 @@
 
 
 <style lang="stylus">
+    @media only screen and (max-width: 768px)
+        h1
+            font-size 2.5rem
 
+    @media screen and (min-width: 769px)
+        h1
+            font-size 3.5rem
     /*@media print
         .mobilePanel
             display none
@@ -98,7 +104,6 @@
             text-shadow 1px 2px #22c3aa, 2px 4px #aee2d9
             text-align center
             color white
-            font-size 3.5em
         /*.elMenuIcon
             width 24px
             text-align center
