@@ -76,7 +76,7 @@
                 color #f5f5f5
 
     .projectTitle
-        transition color 300ms
+        transition all 300ms
         font-size 2.5rem
         color darkslategrey
         border-bottom 2px darkslategray solid
