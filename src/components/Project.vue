@@ -79,7 +79,9 @@
         transition color 300ms
         font-size 2.5rem
         color darkslategrey
+        border-bottom 2px darkslategray solid
 
     .projectTitle:hover
         color #9f3
+        border-bottom-color: #9f3
 </style>
