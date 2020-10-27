@@ -39,8 +39,8 @@
         },
         mounted() {
             let that = this
-            document.body.onmousewheel = function(event) {
-                if (that.lock){
+            document.body.onmousewheel = function(event) { //监听手势
+                if (that.lock){   // 防止一下子滑动多个页面
                     return
                 }
                 let e = event || window.event;

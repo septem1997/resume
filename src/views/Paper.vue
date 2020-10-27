@@ -10,10 +10,6 @@
                     <font-awesome-icon  icon="download"/>
                     <div class="text">下载简历</div>
                 </div>
-                <div class="printBtn floatButton" @click="printResume">
-                    <font-awesome-icon  icon="print"/>
-                    <div class="text">打印简历</div>
-                </div>
             </div>
         </div>
         <div class="backBtn" @click="$router.replace('/')" :style="'transform: translateY('+position+'px)'"><font-awesome-icon icon="home"/></div>
@@ -91,9 +87,6 @@
         methods:{
             downloadResume(){
               window.open('http://pn5jqyvqw.bkt.clouddn.com/%E9%99%88%E6%A0%A1%E5%9F%B9-%E7%AE%80%E5%8E%86.pdf')
-            },
-            printResume() {
-                window.print()
             }
         },
         mounted(){
@@ -171,26 +164,6 @@
 </script>
 
 <style lang="stylus" scoped>
-    @media print
-        .container
-            flex-direction row
-            width: 21cm
-            height: 297mm
-            margin: 0
-            box-shadow: none
-            overflow: hidden
-            border-radius: 0
-            .qrCode
-                display block
-            .notPrint
-                display none
-            .backBtn
-                display none
-        .left
-            width 240px
-            padding 6px
-            box-sizing border-box
-
     @media only screen and (max-width: 768px)
         .container
             flex-direction column
